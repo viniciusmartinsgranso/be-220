@@ -1,0 +1,7 @@
+{
+  "name": "be-220",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
