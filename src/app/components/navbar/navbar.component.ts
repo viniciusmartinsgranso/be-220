@@ -12,9 +12,7 @@ export class NavbarComponent {
       private readonly router: Router,
   ) { }
 
-  public toggleUser: boolean = true;
-
-  public wasOpened: boolean = false;
+  public toggleUser: boolean = false;
 
   public closeUserModal(): void {
     this.toggleUser = false;

@@ -1,6 +1,6 @@
 <div class="navbar">
     <div class="navbar--content">
-        <a class="navbar--content--action" (click)="toggleUser = !toggleUser; wasOpened = true">
+        <a class="navbar--content--action" (click)="toggleUser = !toggleUser">
             <img class="navbar--content--action--menu" src="assets/images/menu-icon.svg">
         </a>
 
@@ -15,7 +15,7 @@
     </div>
 
     <ng-container *ngIf="toggleUser">
-        <div class="user-modal" [class.retire-modal]="!toggleUser" (clickOutside)="closeUserModal()">
+        <div class="user-modal" [ngClass]="{'close-modal': !toggleUser}">
             <div class="user-modal--info">
                 <img src="assets/images/vinicius-martins.jpg">
                 <div class="user-modal--info--profile">
