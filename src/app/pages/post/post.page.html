@@ -1,0 +1,10 @@
+<div class="post">
+    <label class="post--back" (click)="backHome()">Voltar</label>
+    <div class="post--content">
+        <h3 class="post--content--title">{{ post.title || '' }}</h3>
+        <img [src]="post.images[0]" alt="Imagem">
+        <label>{{ post.descriptions[0] }}</label>
+        <img [src]="post.images[1]" alt="Imagem">
+        <label>{{ post.descriptions[1] }}</label>
+    </div>
+</div>

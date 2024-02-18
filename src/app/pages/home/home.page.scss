@@ -1,0 +1,79 @@
+.home {
+  padding: 2rem 1rem 2rem 2rem;
+  background: black;
+  height: 100%;
+  width: 100%;
+  color: white;
+
+  &--header {
+    color: var(--b220-orange-light);
+
+    h5 {
+      font-weight: bold;
+      font-style: italic;
+    }
+  }
+
+  &--posts {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+
+    &--content {
+      display: flex;
+      flex-direction: column;
+
+      &--info {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        font-weight: bold;
+        position: relative;
+
+        &--title {
+          margin: .5rem 0;
+        }
+
+        &--plus {
+          border: 0.1rem solid var(--b220-orange-light);
+          padding: 0 0.4rem;
+          border-radius: 100%;
+          color: var(--b220-orange-light);
+          font-weight: bold;
+        }
+
+        &--new {
+          font-size: .4rem;
+          background: var(--b220-orange-light);
+          padding: 0 0.3rem;
+          border-radius: 3rem;
+          position: absolute;
+          right: 55%;
+          top: 30%;
+        }
+      }
+
+      &--card {
+        display: flex;
+        gap: 2rem;
+        overflow: auto;
+      }
+    }
+
+    &--fade {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 20%;
+      background: linear-gradient(to left, rgb(0 0 0), rgba(255, 255, 255, 0));
+    }
+  }
+}
+
+.line {
+  border: .1rem solid var(--b220-orange-light);
+  width: 100%;
+  margin: 1rem 0;
+}

@@ -1,0 +1,7 @@
+<div class="post-card">
+  <img [src]="post.images[0]" alt="Imagem">
+  <label *ngIf="post.title.length < 80; else spreadText">{{ post.title }}</label>
+  <ng-template #spreadText>
+    <label>{{ post.title.substring(0, 80) }}...</label>
+  </ng-template>
+</div>

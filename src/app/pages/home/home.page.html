@@ -1,0 +1,65 @@
+<div class="home">
+    <div class="home--header">
+        <label>Olá! Boa tarde, Vinícius Martins</label>
+        <h5>Como vamos mudar nossa vida hoje?</h5>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="home--posts">
+        <div class="home--posts--content">
+            <div class="home--posts--content--info">
+                <p class="home--posts--content--info--title">PERSONAL ONLINE</p>
+                <label class="home--posts--content--info--plus">+</label>
+            </div>
+            <div class="home--posts--content--card">
+                <app-home-card
+                        [card]="personalCard[0]"
+                        [isCreate]="true">
+                </app-home-card>
+
+                <ng-container *ngFor="let card of personalCard | slice:1:personalCard.length; trackBy: trackBy">
+                    <app-home-card
+                            [card]="card"
+                    >
+                    </app-home-card>
+                </ng-container>
+            </div>
+        </div>
+
+        <div class="home--posts--content">
+            <div class="home--posts--content--info">
+                <p class="home--posts--content--info--title">PROGRAMAS</p>
+                <label class="home--posts--content--info--new">NOVO</label>
+            </div>
+
+            <div class="home--posts--content--card">
+                <ng-container *ngFor="let card of programsCard; trackBy: trackBy">
+                    <app-home-card
+                            [card]="card"
+                    >
+                    </app-home-card>
+                </ng-container>
+            </div>
+
+        </div>
+
+        <div class="home--posts--content">
+            <div class="home--posts--content--info">
+                <p class="home--posts--content--info--title">CONTEÚDOS</p>
+            </div>
+
+            <div class="home--posts--content--card">
+                <ng-container *ngFor="let post of posts; trackBy: trackBy">
+                    <app-post-card [post]="post"
+                                    (click)="goToPost(post.id)">
+
+                    </app-post-card>
+                </ng-container>
+            </div>
+
+        </div>
+
+        <div class="home--posts--fade"></div>
+    </div>
+</div>

@@ -24,3 +24,73 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+/** Fonts **/
+*{
+  font-family: OpenSans;
+}
+
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('assets/fonts/OpenSans-Light.ttf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('assets/fonts/OpenSans-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('assets/fonts/OpenSans-Bold.ttf');
+  font-weight: 600;
+}
+
+.fade-in {
+  animation: fade-in ease-in-out 500ms;
+}
+
+.fade-out {
+  animation: fade-out ease-in-out 500ms;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.toast-center {
+  text-align: center;
+  font-weight: bold;
+}
+
+*::-webkit-scrollbar {
+  height: 0.4rem;
+  width: 0.4rem;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 2rem;
+  background: #000000;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: var(--b220-orange-light);
+}

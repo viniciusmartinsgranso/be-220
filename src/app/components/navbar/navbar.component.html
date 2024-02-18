@@ -1,0 +1,42 @@
+<div class="navbar">
+    <div class="navbar--content">
+        <a class="navbar--content--action" (click)="toggleUser = !toggleUser; wasOpened = true">
+            <img class="navbar--content--action--menu" src="assets/images/menu-icon.svg">
+        </a>
+
+        <a class="navbar--content--action" (click)="goToHome()">
+            <img class="navbar--content--action--logo" src="assets/images/logo.png">
+        </a>
+
+        <a class="navbar--content--bell">
+            <img src="assets/images/bell.svg">
+            <div class="navbar--content--bell--active"></div>
+        </a>
+    </div>
+
+    <ng-container *ngIf="toggleUser">
+        <div class="user-modal" [class.retire-modal]="!toggleUser" (clickOutside)="closeUserModal()">
+            <div class="user-modal--info">
+                <img src="assets/images/vinicius-martins.jpg">
+                <div class="user-modal--info--profile">
+                    <label>Vinícius Martins</label>
+                    <label class="user-modal--info--profile--level">Nível Roxo</label>
+                </div>
+            </div>
+
+            <div class="user-modal--actions">
+                <div class="user-modal--actions--options">
+                    <a class="user-modal--actions--options--btn">
+                        <img src="assets/images/body-icon.svg">
+                        MEU CORPO
+                    </a>
+
+                    <a class="user-modal--actions--options--btn">
+                        <img src="assets/images/trophy.svg">
+                        OBJETIVOS E CONQUISTAS
+                    </a>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>

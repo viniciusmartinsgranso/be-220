@@ -1,0 +1,23 @@
+<div class="home-card" [style]="isCreate ? 'display: flex; align-items: center; justify-content: center;': ''">
+    <ng-container *ngIf="!isCreate; else created">
+        <div class="home-card--content">
+            <div class="home-card--content--info">
+                <label class="home-card--content--info--desc">{{ card.description }}</label>
+                <label>{{ card.title }}</label>
+            </div>
+        </div>
+    </ng-container>
+    <img class="home-card--img" [style]="isCreate ? 'opacity: 0.3' : 'opacity: 0.5'" [src]="card.image">
+
+    <ng-template #created>
+        <div class="home-card--overlay"></div>
+
+        <div class="home-card--create">
+            <label class="home-card--create--plus">+</label>
+            <div class="home-card--create--new">
+                <label>NOVO</label>
+                <label>TREINO</label>
+            </div>
+        </div>
+    </ng-template>
+</div>

@@ -1,0 +1,33 @@
+.post {
+  min-height: calc(100vh - var(--navbar-height));
+  background: black;
+  padding: 1rem;
+  color: #fff;
+  position: relative;
+
+  &--back {
+    background: var(--b220-orange-light);
+    border-radius: 2rem;
+    padding: 0.2rem 0.6rem;
+    font-weight: bold;
+    margin: 0;
+    position: absolute;
+  }
+
+  &--content {
+    background: var(--b220-grey-navbar);
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    &--title {
+      border-bottom: 0.1rem solid var(--b220-orange-light)
+    }
+
+    img {
+      border-radius: 2rem;
+    }
+  }
+}
